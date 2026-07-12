@@ -32,7 +32,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 3rem;display:fl
 .hero-name{font-size:clamp(2.8rem,6vw,6rem);font-weight:800;line-height:1;letter-spacing:-0.03em;margin-bottom:0.6rem;opacity:0;animation:fadeUp 0.6s ease forwards 0.4s;}
 .hero-name .grad{background:linear-gradient(135deg,var(--accent) 0%,var(--accent2) 50%,var(--accent3) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
 .hero-role{font-family:'JetBrains Mono',monospace;font-size:1rem;color:var(--muted);margin-bottom:1.8rem;opacity:0;animation:fadeUp 0.6s ease forwards 0.6s;}
-.hero-role::before{content:'> ';color:var(--accent);}
+.hero-role::before{content:'> ';}
 .typing{color:var(--accent);border-right:2px solid var(--accent);animation:blink 0.8s infinite;padding-right:2px;}
 @keyframes blink{50%{border-color:transparent;}}
 .hero-desc{font-size:0.97rem;color:var(--muted);line-height:1.8;max-width:500px;margin-bottom:2.5rem;opacity:0;animation:fadeUp 0.6s ease forwards 0.8s;}
@@ -98,12 +98,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 3rem;display:fl
 .project-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2),var(--accent3));opacity:0;transition:opacity 0.2s;}
 .project-card:hover{border-color:rgba(79,70,229,0.3);transform:translateY(-4px);box-shadow:0 12px 40px var(--glow);}
 .project-card:hover::before{opacity:1;}
+.project-card.featured{border-color:rgba(79,70,229,0.3);box-shadow:0 8px 32px var(--glow);}
+.project-card.featured::before{opacity:1;}
 .project-num{font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--muted);margin-bottom:0.7rem;display:block;}
 .project-title{font-size:1.1rem;font-weight:800;margin-bottom:0.6rem;line-height:1.3;color:var(--text);}
 .project-desc{font-size:0.87rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;}
 .project-stat{font-family:'JetBrains Mono',monospace;font-size:0.73rem;font-weight:700;color:var(--accent4);background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.2);padding:4px 12px;border-radius:100px;display:inline-block;margin-bottom:1rem;}
 .project-stack{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:1.2rem;}
 .stack-tag{font-size:0.73rem;font-weight:600;padding:3px 10px;background:var(--bg2);border:1px solid var(--border);border-radius:100px;color:var(--muted);}
+.project-links{display:flex;gap:1rem;flex-wrap:wrap;}
 .project-link{font-family:'JetBrains Mono',monospace;font-size:0.78rem;font-weight:700;color:var(--accent);text-decoration:none;transition:color 0.2s;}
 .project-link:hover{color:var(--accent2);}
 .project-link::before{content:'↗ ';}
@@ -164,20 +167,17 @@ footer span{color:var(--accent);font-weight:700;}
     <div class="hero-badge"><span class="badge-dot"></span> Available for Hire — Fresher 2026</div>
     <h1 class="hero-name">Asbir<br><span class="grad">Kallada</span></h1>
     <p class="hero-role"><span class="typing">Python Developer</span></p>
-    <p class="hero-desc">Recent CSE graduate skilled in Python and machine learning with hands-on IoT and full‑stack project experience.
-Published researcher (IJIRT) and former AI/ML intern, seeking entry‑level Python or software developer roles where I can
-build practical, scalable solutions. Focused on Python development and delivering deployable ML/IoT solutions during
-internships and projects.</p>
+    <p class="hero-desc">Recent CSE graduate skilled in Python and machine learning with hands-on IoT and full‑stack project experience. Published researcher (IJIRT) and former AI/ML intern, seeking entry‑level Python or software developer roles where I can build practical, scalable solutions.</p>
     <div class="hero-cta">
       <a href="#projects" class="btn btn-primary">View Projects ↓</a>
       <a href="#contact" class="btn btn-secondary">Get in Touch</a>
       <a href="https://github.com/asbir10" target="_blank" class="btn btn-secondary">GitHub ↗</a>
     </div>
     <div class="hero-stats">
-      <div><span class="stat-num" id="s1">94.87%</span><span class="stat-label">ML Accuracy</span></div>
-      <div><span class="stat-num" id="s2">1800+</span><span class="stat-label">Users Served</span></div>
-      <div><span class="stat-num" id="s3">6+</span><span class="stat-label">Projects Built</span></div>
-      <div><span class="stat-num" id="s4">3</span><span class="stat-label">Certifications</span></div>
+      <div><span class="stat-num">94.87%</span><span class="stat-label">ML Accuracy</span></div>
+      <div><span class="stat-num">1800+</span><span class="stat-label">Users Served</span></div>
+      <div><span class="stat-num">7+</span><span class="stat-label">Projects Built</span></div>
+      <div><span class="stat-num">3</span><span class="stat-label">Certifications</span></div>
     </div>
   </div>
   <div class="hero-photo-wrap">
@@ -185,7 +185,7 @@ internships and projects.</p>
     <img src="./photo.jpeg" alt="Asbir Kallada" class="hero-photo">
     <div class="photo-badge">Open to Work ✦</div>
     <div class="floating-chip chip1"><span>🧠</span> ML Engineer</div>
-    <div class="floating-chip chip2"><span>⚡</span> React + Node</div>
+    <div class="floating-chip chip2"><span>⚡</span> FastAPI + React</div>
   </div>
 </div>
 
@@ -193,7 +193,7 @@ internships and projects.</p>
   <div class="section-header reveal"><span class="section-tag">Who I Am</span><h2 class="section-title">About <span>Me</span></h2></div>
   <div class="about-grid">
     <div class="about-text reveal">
-      <p>Hey! I'm Asbir — a recent <strong>Computer Science Engineering Graduate(2026)</strong> from <strong>Areekode, India</strong>. I love building across domains: training ML models, writing IoT firmware, and shipping full-stack web apps.</p>
+      <p>Hey! I'm Asbir — a recent <strong>Computer Science Engineering Graduate (2026)</strong> from <strong>Areekode, India</strong>. I love building across domains: training ML models, writing IoT firmware, and shipping full-stack web apps.</p>
       <p>In my final year I served as <strong>Arts Club Secretary</strong> at SNGCE — organizing Tech Fests, Arts Fests, and Logo Launches, managing vendor budgets and coordinating across 1800+ students. Leadership matters as much as code.</p>
       <p>Actively looking for <strong>Software Developer, Python Developer, or Full Stack Developer</strong> roles — fresher, available immediately, open to anywhere in India and remote.</p>
       <div class="about-langs"><div class="about-langs-title">Languages I Speak</div><div class="lang-tags"><span class="lang-tag">English</span><span class="lang-tag">Malayalam</span><span class="lang-tag">Hindi</span><span class="lang-tag">Urdu</span><span class="lang-tag">Arabic</span></div></div>
@@ -220,7 +220,8 @@ internships and projects.</p>
     <div class="tl-item"><div class="tl-icon">🧠</div><div class="tl-card"><div class="tl-date">2024</div><div class="tl-title">Parkinson's Disease Detection — 94.87% Accuracy</div><div class="tl-sub">Python · Scikit-Learn · GridSearchCV · Random Forest</div><div class="tl-desc">Trained 4 ML models on 195 biomedical voice samples. Random Forest with GridSearchCV tuning achieved 94.87% accuracy — best result across all 4 classifiers.</div></div></div>
     <div class="tl-item"><div class="tl-icon">🌐</div><div class="tl-card"><div class="tl-date">2024</div><div class="tl-title">SNGCE Workflow System — 1800+ Users</div><div class="tl-sub">React.js · Node.js · MongoDB · REST API</div><div class="tl-desc">Replaced all paper-based processes at SNGCE with a digital workflow tool. Rolled out campus-wide — 1800+ students and staff use it daily.</div></div></div>
     <div class="tl-item"><div class="tl-icon">🎭</div><div class="tl-card"><div class="tl-date">2025 — Final Year</div><div class="tl-title">Arts Club Secretary + NovaCane</div><div class="tl-sub">Leadership · IoT · ESP32 · Kotlin · Firebase</div><div class="tl-desc">Elected Arts Club Secretary — organised Tech Fest, Arts Fest, and Logo Launch. Simultaneously building NovaCane: an AI-powered smart cane for the visually impaired.</div></div></div>
-    <div class="tl-item"><div class="tl-icon">📄</div><div class="tl-card"><div class="tl-date">2026</div><div class="tl-title">Published Research Paper in IJIRT</div><div class="tl-sub">AI · IoT · Computer Vision · Edge AI</div><div class="tl-desc">Published “A Survey on AI-Powered Smart Assistive Cane for Visually Impaired using IoT and Computer Vision” in the International Journal of Innovative Research in Technology (IJIRT). Research focused on Edge AI, sensor fusion, obstacle detection, and assistive navigation systems.</div></div></div>
+    <div class="tl-item"><div class="tl-icon">📄</div><div class="tl-card"><div class="tl-date">2026</div><div class="tl-title">Published Research Paper in IJIRT</div><div class="tl-sub">AI · IoT · Computer Vision · Edge AI</div><div class="tl-desc">Published "A Survey on AI-Powered Smart Assistive Cane for Visually Impaired using IoT and Computer Vision" in IJIRT (Impact Factor 8.412). Research focused on Edge AI, sensor fusion, obstacle detection, and assistive navigation systems.</div></div></div>
+    <div class="tl-item"><div class="tl-icon">🚢</div><div class="tl-card"><div class="tl-date">2026</div><div class="tl-title">Shipped Full-Stack System in 8 Hours — Nrolled Assignment</div><div class="tl-sub">FastAPI · PostgreSQL · Supabase · React · Netlify · Render</div><div class="tl-desc">Built and deployed a complete Leave Management System as a live interview assignment. FastAPI backend on Render with Supabase PostgreSQL, React frontend on Netlify — fully live with persistent data.</div></div></div>
     <div class="tl-item"><div class="tl-icon">🚀</div><div class="tl-card" style="border-color:var(--accent);box-shadow:0 6px 24px var(--glow);"><div class="tl-date">2026 — Now</div><div class="tl-title">Graduating & Seeking First Role</div><div class="tl-sub">Open to SDE · Python Dev · Full Stack · Internship/Trainee</div><div class="tl-desc">College wrapping up. Ready to bring everything I've built into a real team. Open to anywhere in India, remote, or relocation. Available immediately.</div></div></div>
   </div>
 </div>
@@ -229,115 +230,99 @@ internships and projects.</p>
   <div class="section-header reveal"><span class="section-tag">Capabilities</span><h2 class="section-title">What I <span>Build With</span></h2></div>
   <div class="skills-grid">
     <div class="skill-card reveal">
-  <div class="skill-card-title">⌨️ Programming</div>
-  <div class="skill-tags">
-    <span class="skill-tag">Python</span>
-    <span class="skill-tag">Java</span>
-    <span class="skill-tag">C</span>
-    <span class="skill-tag">Dart</span>
-    <span class="skill-tag">SQL</span>
-    <span class="skill-tag">OOP</span>
-    <span class="skill-tag">Data Structures</span>
-    <span class="skill-tag">Algorithms</span>
-  </div>
-</div>
-
-<div class="skill-card reveal d1">
-  <div class="skill-card-title">🧠 Data Science & ML</div>
-  <div class="skill-tags">
-    <span class="skill-tag">Pandas</span>
-    <span class="skill-tag">NumPy</span>
-    <span class="skill-tag">Matplotlib</span>
-    <span class="skill-tag">Scikit-Learn</span>
-    <span class="skill-tag">EDA</span>
-  </div>
-</div>
-
-<div class="skill-card reveal d2">
-  <div class="skill-card-title">🤖 AI & GenAI</div>
-  <div class="skill-tags">
-    <span class="skill-tag">ChatGPT</span>
-    <span class="skill-tag">OpenAI API</span>
-    <span class="skill-tag">LangChain</span>
-    <span class="skill-tag">Claude AI</span>
-    <span class="skill-tag">Cursor</span>
-    <span class="skill-tag">DeepSeek</span>
-    <span class="skill-tag">Gemini API</span>
-    <span class="skill-tag">Prompt Engineering</span>
-    <span class="skill-tag">Hugging Face</span>
-    <span class="skill-tag">Streamlit</span>
-  </div>
-</div>
-
-<div class="skill-card reveal d3">
-  <div class="skill-card-title">🌐 Web Development</div>
-  <div class="skill-tags">
-    <span class="skill-tag">HTML</span>
-    <span class="skill-tag">CSS</span>
-    <span class="skill-tag">JavaScript</span>
-    <span class="skill-tag">React.js</span>
-    <span class="skill-tag">Node.js</span>
-    <span class="skill-tag">REST API</span>
-  </div>
-</div>
-
-<div class="skill-card reveal d1">
-  <div class="skill-card-title">🛠️ Tools & Technologies</div>
-  <div class="skill-tags">
-    <span class="skill-tag">Git</span>
-    <span class="skill-tag">GitHub</span>
-    <span class="skill-tag">MongoDB</span>
-    <span class="skill-tag">Postman</span>
-    <span class="skill-tag">VS Code</span>
-    <span class="skill-tag">Jupyter Notebook</span>
-    <span class="skill-tag">Linux</span>
-  </div>
-</div>
-
-<div class="skill-card reveal d2">
-  <div class="skill-card-title">⚡ Embedded & IoT</div>
-  <div class="skill-tags">
-    <span class="skill-tag">ESP32</span>
-    <span class="skill-tag">Ultrasonic Sensors</span>
-    <span class="skill-tag">Hardware-Software Integration</span>
-  </div>
-</div>
-
-<div class="skill-card reveal d3">
-  <div class="skill-card-title">🤝 Soft Skills</div>
-  <div class="skill-tags">
-    <span class="skill-tag">Problem Solving</span>
-    <span class="skill-tag">Leadership</span>
-    <span class="skill-tag">Communication</span>
-    <span class="skill-tag">Event Organization</span>
-    <span class="skill-tag">Teamwork</span>
-  </div>
-</div>
+      <div class="skill-card-title">⌨️ Programming</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Python</span><span class="skill-tag">JavaScript</span><span class="skill-tag">Java</span><span class="skill-tag">C</span><span class="skill-tag">Dart</span><span class="skill-tag">SQL</span><span class="skill-tag">OOP</span><span class="skill-tag">Data Structures</span><span class="skill-tag">Algorithms</span>
+      </div>
+    </div>
+    <div class="skill-card reveal d1">
+      <div class="skill-card-title">🔧 Backend</div>
+      <div class="skill-tags">
+        <span class="skill-tag">FastAPI</span><span class="skill-tag">Node.js</span><span class="skill-tag">REST API</span><span class="skill-tag">SQLAlchemy</span><span class="skill-tag">Django (basic)</span>
+      </div>
+    </div>
+    <div class="skill-card reveal d2">
+      <div class="skill-card-title">🎨 Frontend</div>
+      <div class="skill-tags">
+        <span class="skill-tag">React.js</span><span class="skill-tag">Vite</span><span class="skill-tag">Tailwind CSS</span><span class="skill-tag">Framer Motion</span><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span>
+      </div>
+    </div>
+    <div class="skill-card reveal d3">
+      <div class="skill-card-title">🗄️ Databases</div>
+      <div class="skill-tags">
+        <span class="skill-tag">PostgreSQL</span><span class="skill-tag">Supabase</span><span class="skill-tag">MongoDB</span><span class="skill-tag">SQLite</span>
+      </div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-card-title">🧠 Data Science & ML</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Pandas</span><span class="skill-tag">NumPy</span><span class="skill-tag">Matplotlib</span><span class="skill-tag">Scikit-Learn</span><span class="skill-tag">Seaborn</span><span class="skill-tag">EDA</span>
+      </div>
+    </div>
+    <div class="skill-card reveal d1">
+      <div class="skill-card-title">🤖 AI & GenAI</div>
+      <div class="skill-tags">
+        <span class="skill-tag">LangChain</span><span class="skill-tag">LangGraph</span><span class="skill-tag">AI Agents</span><span class="skill-tag">OpenAI API</span><span class="skill-tag">Gemini API</span><span class="skill-tag">Hugging Face</span><span class="skill-tag">Streamlit</span><span class="skill-tag">Prompt Engineering</span>
+      </div>
+    </div>
+    <div class="skill-card reveal d2">
+      <div class="skill-card-title">🛠️ AI Dev Tools</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Google Antigravity</span><span class="skill-tag">Cursor</span><span class="skill-tag">Claude AI</span><span class="skill-tag">Lovable</span><span class="skill-tag">ChatGPT</span><span class="skill-tag">DeepSeek</span>
+      </div>
+    </div>
+    <div class="skill-card reveal d3">
+      <div class="skill-card-title">☁️ Cloud & DevOps</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Render</span><span class="skill-tag">Netlify</span><span class="skill-tag">Git</span><span class="skill-tag">GitHub</span><span class="skill-tag">Postman</span><span class="skill-tag">Linux</span><span class="skill-tag">Docker (basic)</span>
+      </div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-card-title">⚡ Embedded & IoT</div>
+      <div class="skill-tags">
+        <span class="skill-tag">ESP32-WROOM-32</span><span class="skill-tag">Ultrasonic Sensors</span><span class="skill-tag">Firebase</span><span class="skill-tag">Hardware-Software Integration</span>
+      </div>
+    </div>
+    <div class="skill-card reveal d1">
+      <div class="skill-card-title">🤝 Soft Skills</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Problem Solving</span><span class="skill-tag">Leadership</span><span class="skill-tag">Communication</span><span class="skill-tag">Event Organization</span><span class="skill-tag">Teamwork</span>
+      </div>
+    </div>
   </div>
 </div>
 
 <div class="wrap section-pad" id="projects">
   <div class="section-header reveal"><span class="section-tag">Work</span><h2 class="section-title">Projects I've <span>Built</span></h2></div>
   <div class="projects-grid">
-    <div class="project-card reveal"><span class="project-num">01 — IoT / Android</span><h3 class="project-title">NovaCane — Smart AI Cane</h3><p class="project-desc">AI-powered assistive device for the visually impaired. ESP32 sensors detect obstacles with real-time vibration alerts. Kotlin Android app with Firebase.</p><span class="project-stat">Live · Firebase Real-time</span><div class="project-stack"><span class="stack-tag">ESP32</span><span class="stack-tag">Kotlin</span><span class="stack-tag">Firebase</span><span class="stack-tag">IoT</span></div><a href="https://github.com/n8novaa/NovaCane" target="_blank" class="project-link">View on GitHub</a></div>
-    <div class="project-card reveal d1"><span class="project-num">02 — Machine Learning</span><h3 class="project-title">Parkinson's Disease Detection</h3><p class="project-desc">Compared 4 ML classifiers on 195 biomedical voice samples. GridSearchCV hyperparameter tuning pushed Random Forest to peak accuracy.</p><span class="project-stat">94.87% accuracy</span><div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">Scikit-Learn</span><span class="stack-tag">SVM</span><span class="stack-tag">Random Forest</span></div><a href="https://github.com/asbir10/Detect-Parkinson-s-Disease" target="_blank" class="project-link">View on GitHub</a></div>
-    <div class="project-card reveal d2"><span class="project-num">03 — Full Stack</span><h3 class="project-title">SNGCE Workflow System</h3><p class="project-desc">Digitised all paper-based college processes. React + Node + MongoDB. Deployed campus-wide and actively used by 1800+ people daily.</p><span class="project-stat">1800+ users</span><div class="project-stack"><span class="stack-tag">React.js</span><span class="stack-tag">Node.js</span><span class="stack-tag">MongoDB</span><span class="stack-tag">REST API</span></div><a href="https://github.com/Benson-62/Sngce_Workflow" target="_blank" class="project-link">View on GitHub</a></div>
-    <div class="project-card reveal"><span class="project-num">04 — Data Science</span><h3 class="project-title">IPL Data Analysis</h3><p class="project-desc">Deep EDA on multi-season IPL datasets. Team win rates, player performance trends, and match outcome insights through rich visualizations.</p><div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">Pandas</span><span class="stack-tag">Matplotlib</span><span class="stack-tag">EDA</span></div><a href="https://github.com/asbir10/Data-Analysis-And-Visualization---IPL-Data" target="_blank" class="project-link">View on GitHub</a></div>
-    <div class="project-card reveal d1"><span class="project-num">05 — Full Stack</span><h3 class="project-title">Shopping Aggregation Platform</h3><p class="project-desc">Price comparison across e-commerce sites with API-based data fetching, product search, and fully responsive UI.</p><div class="project-stack"><span class="stack-tag">React.js</span><span class="stack-tag">JavaScript</span><span class="stack-tag">API Integration</span></div><a href="https://github.com/asbir10/shopping-aggregation-platform" target="_blank" class="project-link">View on GitHub</a></div>
-    <div class="project-card reveal d2"><span class="project-num">06 — Weather App</span><h3 class="project-title">Weather Dashboard</h3><p class="project-desc">Real-time weather with location-based forecasting, API integration, and clean data visualization.</p><div class="project-stack"><span class="stack-tag">HTML</span><span class="stack-tag">CSS</span><span class="stack-tag">JavaScript</span><span class="stack-tag">Weather API</span></div><a href="https://github.com/asbir10/Weather-Dashboard" target="_blank" class="project-link">View on GitHub</a></div>
+
+    <div class="project-card featured reveal"><span class="project-num">00 — Full Stack · Live</span><h3 class="project-title">Leave Management System — Nrolled</h3><p class="project-desc">Built and deployed a complete production-grade leave management system in 8 hours as a live interview assignment. Employees apply for leave, admins approve/reject with automatic balance deduction.</p><span class="project-stat">Live · Deployed · FastAPI + React</span><div class="project-stack"><span class="stack-tag">FastAPI</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">Supabase</span><span class="stack-tag">SQLAlchemy</span><span class="stack-tag">React</span><span class="stack-tag">Vite</span><span class="stack-tag">Tailwind CSS</span><span class="stack-tag">Render</span><span class="stack-tag">Netlify</span></div><div class="project-links"><a href="https://nrolled-leave.lovable.app" target="_blank" class="project-link">Live App</a><a href="https://github.com/asbir10/nrolled-leave-management" target="_blank" class="project-link">GitHub</a></div></div>
+
+    <div class="project-card reveal"><span class="project-num">01 — IoT / Android</span><h3 class="project-title">NovaCane — Smart AI Cane</h3><p class="project-desc">AI-powered assistive device for the visually impaired. ESP32 sensors detect obstacles with real-time vibration alerts. Kotlin Android app with Firebase SOS and bilingual TTS.</p><span class="project-stat">Published in IJIRT · Impact Factor 8.412</span><div class="project-stack"><span class="stack-tag">ESP32</span><span class="stack-tag">HC-SR04</span><span class="stack-tag">Kotlin</span><span class="stack-tag">Firebase</span><span class="stack-tag">IoT</span></div><div class="project-links"><a href="https://github.com/n8novaa/NovaCane" target="_blank" class="project-link">GitHub</a></div></div>
+
+    <div class="project-card reveal d1"><span class="project-num">02 — Machine Learning</span><h3 class="project-title">Parkinson's Disease Detection</h3><p class="project-desc">Compared 4 ML classifiers on 195 biomedical voice samples. GridSearchCV hyperparameter tuning pushed Random Forest to peak accuracy.</p><span class="project-stat">94.87% accuracy</span><div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">Scikit-Learn</span><span class="stack-tag">SVM</span><span class="stack-tag">Random Forest</span></div><div class="project-links"><a href="https://github.com/asbir10/Detect-Parkinson-s-Disease" target="_blank" class="project-link">GitHub</a></div></div>
+
+    <div class="project-card reveal d2"><span class="project-num">03 — Full Stack</span><h3 class="project-title">SNGCE Workflow System</h3><p class="project-desc">Digitised all paper-based college processes. React + Node + MongoDB. Deployed campus-wide and actively used by 1800+ people daily.</p><span class="project-stat">1800+ users</span><div class="project-stack"><span class="stack-tag">React.js</span><span class="stack-tag">Node.js</span><span class="stack-tag">MongoDB</span><span class="stack-tag">REST API</span></div><div class="project-links"><a href="https://github.com/Benson-62/Sngce_Workflow" target="_blank" class="project-link">GitHub</a></div></div>
+
+    <div class="project-card reveal"><span class="project-num">04 — Data Science</span><h3 class="project-title">IPL Data Analysis</h3><p class="project-desc">Deep EDA on multi-season IPL datasets. Team win rates, player performance trends, and match outcome insights through rich visualizations.</p><div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">Pandas</span><span class="stack-tag">Matplotlib</span><span class="stack-tag">EDA</span></div><div class="project-links"><a href="https://github.com/asbir10/Data-Analysis-And-Visualization---IPL-Data" target="_blank" class="project-link">GitHub</a></div></div>
+
+    <div class="project-card reveal d1"><span class="project-num">05 — Full Stack</span><h3 class="project-title">Shopping Aggregation Platform</h3><p class="project-desc">Price comparison across e-commerce sites with API-based data fetching, product search, and fully responsive UI.</p><div class="project-stack"><span class="stack-tag">React.js</span><span class="stack-tag">Node.js</span><span class="stack-tag">MongoDB</span><span class="stack-tag">REST API</span></div><div class="project-links"><a href="https://github.com/asbir10/shopping-aggregation-platform" target="_blank" class="project-link">GitHub</a></div></div>
+
+    <div class="project-card reveal d2"><span class="project-num">06 — Weather App</span><h3 class="project-title">Weather Dashboard</h3><p class="project-desc">Real-time weather with location-based forecasting, API integration, and clean data visualization.</p><div class="project-stack"><span class="stack-tag">HTML</span><span class="stack-tag">CSS</span><span class="stack-tag">JavaScript</span><span class="stack-tag">Weather API</span></div><div class="project-links"><a href="https://github.com/asbir10/Weather-Dashboard" target="_blank" class="project-link">GitHub</a></div></div>
+
   </div>
 </div>
 
 <div class="wrap section-pad" id="publications">
   <div class="section-header reveal"><span class="section-tag">Research</span><h2 class="section-title">Publi<span>cations</span></h2></div>
   <div class="projects-grid">
-    <div class="project-card reveal"><span class="project-num">01 — Research Publication</span><h3 class="project-title">AI-Powered Smart Assistive Cane for Visually Impaired</h3><p class="project-desc">Published research paper on an AI-powered smart assistive cane using IoT, computer vision, Edge AI, and sensor fusion technologies for visually impaired navigation and obstacle detection.</p><span class="project-stat">Published in IJIRT (ISSN: 2349-6002) · April 2026</span>
+    <div class="project-card reveal"><span class="project-num">01 — Research Publication</span><h3 class="project-title">AI-Powered Smart Assistive Cane for Visually Impaired</h3><p class="project-desc">Published research paper on an AI-powered smart assistive cane using IoT, computer vision, Edge AI, and sensor fusion technologies for visually impaired navigation and obstacle detection.</p><span class="project-stat">Published in IJIRT (ISSN: 2349-6002) · April 2026 · Impact Factor 8.412</span>
       <div class="project-stack"><span class="stack-tag">AI</span><span class="stack-tag">IoT</span><span class="stack-tag">Computer Vision</span><span class="stack-tag">Edge AI</span><span class="stack-tag">ESP32</span></div>
-      <a href="./IJIRT197375_PAPER.pdf" target="_blank" class="project-link">View Research Paper</a>
+      <div class="project-links"><a href="./IJIRT197375_PAPER.pdf" target="_blank" class="project-link">View Paper</a></div>
     </div>
   </div>
 </div>
-  
+
 <div class="wrap section-pad" id="certifications">
   <div class="section-header reveal"><span class="section-tag">Credentials</span><h2 class="section-title">Certifi<span>cations</span></h2></div>
   <div class="certs-grid">
@@ -347,7 +332,7 @@ internships and projects.</p>
   </div>
 </div>
 
-  <div class="wrap section-pad" id="resume">
+<div class="wrap section-pad" id="resume">
   <div class="section-header reveal"><span class="section-tag">Resume</span><h2 class="section-title">Down<span>load CV</span></h2></div>
   <div class="cert-card reveal" style="max-width:480px;padding:2rem 2.2rem;gap:1.5rem;align-items:center;">
     <div class="cert-icon" style="font-size:1.8rem;width:56px;height:56px;">📄</div>
@@ -358,6 +343,7 @@ internships and projects.</p>
     </div>
   </div>
 </div>
+
 <div class="wrap section-pad" id="contact">
   <div class="section-header reveal"><span class="section-tag">Get in Touch</span><h2 class="section-title">Let's Work <span>Together</span></h2></div>
   <div class="contact-grid">
@@ -377,7 +363,7 @@ internships and projects.</p>
         <div class="form-group"><label class="form-label">YOUR NAME</label><input type="text" name="name" class="form-input" placeholder="John Doe" required></div>
         <div class="form-group"><label class="form-label">EMAIL ADDRESS</label><input type="email" name="email" class="form-input" placeholder="john@company.com" required></div>
         <div class="form-group"><label class="form-label">MESSAGE</label><textarea name="message" class="form-textarea" placeholder="Tell me about the role or opportunity..." required></textarea></div>
-        <button type="submit" class="btn-submit" id="submitBtn">Send Message →</button>
+        <button type="submit" class="btn-submit">Send Message →</button>
       </form>
     </div>
   </div>
@@ -399,7 +385,6 @@ const tlObs=new IntersectionObserver(entries=>{
   entries.forEach((e,i)=>{if(e.isIntersecting){e.target.style.transitionDelay=(i*0.08)+'s';e.target.classList.add('visible');}});
 },{threshold:0.12});
 document.querySelectorAll('.tl-item').forEach(el=>tlObs.observe(el));
-
 </script>
 </body>
 </html>
