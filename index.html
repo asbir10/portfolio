@@ -16,7 +16,9 @@
 <meta property="og:url" content="https://asbir-kallada-portfolio.netlify.app/">
 <meta property="og:image" content="https://asbir-kallada-portfolio.netlify.app/preview.png">
 <meta property="og:site_name" content="Asbir Kallada Portfolio">
-<link rel="icon" href="/favicon.ico">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/logo.png">
+<link rel="apple-touch-icon" href="/logo.png">
 <title>Asbir Kallada | Python Developer Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -32,7 +34,26 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans
 @keyframes float{0%,100%{transform:translateY(0) scale(1);}50%{transform:translateY(-30px) scale(1.05);}}
 body::after{content:'';position:fixed;inset:0;background-image:radial-gradient(circle,rgba(79,70,229,0.1) 1px,transparent 1px);background-size:28px 28px;pointer-events:none;z-index:0;}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 3rem;display:flex;justify-content:space-between;align-items:center;background:rgba(240,244,255,0.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
-.nav-logo{font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:700;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.nav-logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:1rem;
+    font-weight:700;
+}
+
+.nav-logo img{
+    width:34px;
+    height:34px;
+    object-fit:contain;
+}
+
+.nav-logo span{
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
 .nav-links{display:flex;gap:2rem;list-style:none;}
 .nav-links a{font-size:0.83rem;font-weight:600;color:var(--muted);text-decoration:none;transition:color 0.2s;}
 .nav-links a:hover{color:var(--accent);}
@@ -162,7 +183,10 @@ footer span{color:var(--accent);font-weight:700;}
 <div class="bg-orbs"><div class="orb orb1"></div><div class="orb orb2"></div><div class="orb orb3"></div></div>
 
 <nav>
-  <div class="nav-logo">asbir.dev</div>
+  <div class="nav-logo">
+    <img src="./logo.svg" alt="AK Logo">
+    <span>asbir.dev</span>
+</div>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#timeline">Journey</a></li>
