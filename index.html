@@ -749,6 +749,23 @@ footer{padding:30px 0 45px;border-top:1px solid var(--line);color:var(--muted-2)
       <p class="section-copy">Selected credentials and recognition that support the engineering story. Supporting participation certificates remain available as secondary evidence.</p>
     </div>
     <div class="credentials">
+<article class="credential reveal">
+  <div class="cred-icon">
+    <svg width="19"><use href="#i-file"/></svg>
+  </div>
+
+  <h3>B.Tech — Computer Science & Engineering</h3>
+
+  <p>
+    APJ Abdul Kalam Technological University · April 2026 · First Class
+  </p>
+
+  <div class="cred-actions">
+    <button class="text-link" data-open="degree-cert">
+      View certificate
+    </button>
+  </div>
+</article>
       <article class="credential reveal"><div class="cred-icon"><svg width="19"><use href="#i-cpu"/></svg></div><h3>Data Science / ML & AI Specialization</h3><p>Capabl India · Certificate of Completion · 2025</p><div class="cred-actions"><button class="text-link" data-open="capabl">View credential</button></div></article>
       <article class="credential reveal stagger-1"><div class="cred-icon"><svg width="19"><use href="#i-file"/></svg></div><h3>Python Programming Module</h3><p>Capabl India · Module Completion · 2024</p><div class="cred-actions"><button class="text-link" data-open="python-cert">View credential</button></div></article>
 <article class="credential reveal stagger-2">
@@ -885,6 +902,11 @@ modal.addEventListener("click",e=>{if(e.target===modal)closeModal()});
 document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
 
 const modalData={
+ "degree-cert":{
+    title:"B.Tech — Computer Science & Engineering",
+    text:"Provisional certificate confirming qualification for the Bachelor of Technology in Computer Science and Engineering from APJ Abdul Kalam Technological University. Passed in April 2026 with First Class.",
+    gallery:["./provisional-certificate.png"]
+  },
   workflow:{
     title:"SNGCE Workflow System",
     text:"Institutional full-stack workflow platform developed to digitize academic and administrative processes. The live institutional application is private. This portfolio shows an approved/public visual treatment plus the official appreciation letter as evidence of technical contribution; no private credentials are exposed.",
@@ -923,6 +945,7 @@ video:"./novacane-demo.mp4"
     text:"Exploratory analysis built around 20 tasks from the supplied IPL notebook code: match totals, runs, averages, officiating, toss decisions, results, team performance, venue analysis, dismissal patterns, batting, bowling and Man of the Match statistics. The preview intentionally shows the analysis structure without inventing numerical outputs that were not supplied with the source code.",
     gallery:["./ipl-preview.png"]
   },
+ 
   capabl:{
     title:"Capabl — Data Science / ML & AI Specialization",
     text:"Certificate of completion for the Data Science / ML & AI specialization completed through the Capabl program.",
